@@ -12,8 +12,6 @@ contract RealEstate is ERC721URIStorage, Ownable {
         address initialOwner
     ) ERC721("RealEstate", "RS") Ownable(initialOwner) {}
 
-    // constructor() ERC721("RealEstate", "RS") {}
-
     function safeMint(address to, string memory uri) public onlyOwner {
         uint256 tokenId = _nextTokenId++;
         _safeMint(to, tokenId);
